@@ -1,0 +1,16 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<form method="post" action="/add">
+
+    {% if error %}
+        {{ error }}
+    {% endif %}
+
+    <label for="username">Username</label>
+    <input type="text" name="username" value="{{ data.username }}" />
+    
+    <button>Submit</button>
+
+</form>
+{% endblock %}
